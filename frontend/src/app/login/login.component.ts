@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MandatoryDirective } from '../directive/mandatory.directive';
 import { DataService } from '../service/data.service';
 import { Router } from '@angular/router';
 
@@ -27,7 +28,7 @@ export class LoginComponent {
   createForm(){
     this.loginForm=this.fb.group({
       email:['',[Validators.required,Validators.pattern(this.emailPattern)]],
-      password:['']
+      password:['',[Validators.required]]
     })
   }
 
