@@ -1,0 +1,29 @@
+<div class="parent d-flex justify-content-center align-items-center">
+
+  <div class="w-25 p-5 ml-3 col-4 shadow rounded">
+    <h2 class="mb-4 text-center heading">Login </h2>
+    <form [formGroup]="loginForm" >
+      <div class="mb-2">
+        <label class="form-label" placeholder="Email">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+        <div *ngIf=" isFormValid && loginFormControls.email.invalid">
+          <div *ngIf="loginFormControls.email.errors?.required">
+            <label for="" class="text-danger small">Email is required</label>
+          </div>
+        </div>
+          <div *ngIf="loginFormControls.email.errors?.pattern">
+            <label for="" class="text-danger small">Enter a valid email</label>
+          </div>
+        
+      </div>
+      <div class=" mb-2">
+        <label class="form-label">Password</label>
+        <input type="text" class="form-control" formControlName="password">
+    </div>
+        <div class="mt-4 text-center">
+          <button class="btn btn-color" (click)="login()">Login</button>
+        </div>
+      
+    </form>
+  </div>
+</div>
