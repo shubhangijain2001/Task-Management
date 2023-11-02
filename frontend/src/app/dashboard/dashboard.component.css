@@ -1,0 +1,29 @@
+.search::placeholder{
+    color:#eeeeeed0;
+}
+
+a.nav-link.active, a.dropdown-item:hover{
+    background-color: #323538;
+}
+
+a.nav-link>a{
+    display: none;
+}
+
+a.nav-link:hover>a{
+    display: block;
+}
+
+.fav-btn{
+    transition: transform 0.2s;
+}
+
+.fav-btn:hover{
+    transform: scale(1.1);
+}
+
+
+.manage-board-btn:hover{
+    background-color: #4a4b4d;
+    border-radius: 5px;
+}
