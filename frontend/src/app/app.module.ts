@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { Router,RouterModule } from '@angular/router';
+import { MandatoryDirective } from './directive/mandatory.directive';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    MandatoryDirective,
   ],
   imports: [
     BrowserModule,

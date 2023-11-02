@@ -5,7 +5,7 @@
     <form [formGroup]="loginForm" >
       <div class="mb-2">
         <label class="form-label" placeholder="Email">Email</label>
-        <input type="text" class="form-control" formControlName="email">
+        <input type="text" class="form-control" formControlName="email" appMandatory>
         <div *ngIf=" isFormValid && loginFormControls.email.invalid">
           <div *ngIf="loginFormControls.email.errors?.required">
             <label for="" class="text-danger small">Email is required</label>
@@ -18,7 +18,12 @@
       </div>
       <div class=" mb-2">
         <label class="form-label">Password</label>
-        <input type="text" class="form-control" formControlName="password">
+        <input type="password" class="form-control" formControlName="password" appMandatory>
+        <div *ngIf=" isFormValid && loginFormControls.password.invalid">
+            <div *ngIf="loginFormControls.password.errors?.required">
+              <label for="" class="text-danger small">Password is required</label>
+            </div>
+        </div>
     </div>
         <div class="mt-4 text-center">
           <button class="btn btn-color" (click)="login()">Login</button>
