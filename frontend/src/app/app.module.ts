@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { Router,RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     LoginComponent,
   ],
   imports: [
