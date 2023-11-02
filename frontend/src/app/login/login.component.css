@@ -1,0 +1,15 @@
+.parent{
+    width:100vw;
+    height:100vh;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190623/ourmid/pngtree-office-worker-cartoon-work-minimalist-background-image_239069.jpg');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+.heading{
+    color:rgb(38,55,115)
+}
+.btn-color{
+    background-color:#1E245C;
+    color:white
+}
