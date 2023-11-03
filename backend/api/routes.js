@@ -16,12 +16,13 @@ router.post('/login', (req, res) => {
     client.query(`SELECT * FROM users WHERE email ='${email}'`, (err, result) => {
 
         if (err) {
-            res.status(500).send(err)
-        } else {
-            console.log(result);
+            res.status(500).json({message:"Internal server error"})
+        } 
+        else {
+            //console.log(result);
             if (result.rows.length === 0) {
-                res.json({
-                    message: "The user does not exist"
+                res.status(401).json({
+                    message: "User does not exist"
                 })
             } else {
                 const user = result.rows[0]
@@ -36,7 +37,7 @@ router.post('/login', (req, res) => {
                         token: token
                     })
                 } else {
-                    res.status(201).json({
+                    res.status(400).json({
                         message: "Incorrect Password"
                     })
 

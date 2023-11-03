@@ -8,6 +8,7 @@ import { Router,RouterModule } from '@angular/router';
 import { MandatoryDirective } from './directive/mandatory.directive';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './guard/auth.guard';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule.forRoot([
       { path:'', component:LoginComponent },
-      { path:'dashboard', component:DashboardComponent }
+      { path:'dashboard', component:DashboardComponent,canActivate:[AuthGuard] }
     ]),
     ReactiveFormsModule,
     FormsModule,

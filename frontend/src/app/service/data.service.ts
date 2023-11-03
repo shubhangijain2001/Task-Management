@@ -8,8 +8,8 @@ export class DataService {
 
   constructor(public http:HttpClient) { }
 
-  login(email: string, password: string){
-    const requestBody = { email, password };
-    return this.http.post(`http://localhost:3000/login`, requestBody);
+  login(data:{}){
+
+    return this.http.post(`http://localhost:3000/login`, data);
   }
 }
